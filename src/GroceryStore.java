@@ -56,7 +56,16 @@ public class GroceryStore
      */
     public ArrayList<Product> oversized(double weight)
     {
+        ArrayList<Product> oversizedProducts = new ArrayList<Product> ();
 
+        for (int i = 0; i < productsStocked.length; i++)
+        {
+            if (productsStocked[i].getWeight() > weight)
+            {
+                oversizedProducts.add(productsStocked[i]);
+            }
+        }
+        return oversizedProducts;
     }
 
 }
